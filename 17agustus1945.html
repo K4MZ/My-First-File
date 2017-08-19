@@ -1,1016 +1,558 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Learn HTML 5</title>
-    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Baloo+Thambi"> -->
-    <style>
-      body {
-      	background-color             : #000;
-        color                        : #fff;
-      }
-
-      .menu-wrap {
-      	background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-      	height                       : 9%;
-      	line-height                  : 39%;
-      	position                     : fixed;
-        padding-left                 : 100px;
-        padding-bottom               : 1%;
-      	width                        : 100%;
-        top                          : 0;
-        left                         : 0;
-      }
-
-      header {
-        font-size                    : 13px;
-      	text-align                   : center;
-        font-family                  : 'Baloo Thambi';
-        margin-top                   : 7%;
-        margin-bottom                : 0.5%;
-        border                       : 1px solid #fff;
-      }
-
-      main, aside {
-        border                       : #fff solid 1px;
-      }
-
-      main {
-        float                        : left;
-        min-width                    : 76%;
-        min-height                   : 100%;
-        text-align                   : center;
-        margin-bottom                : 1%;
-      }
-
-      figcaption {
-        font-size                    : 10px;
-      }
-
-      aside {
-        float                        : right;
-        width                        : 23.2%;
-        height                       : 76%;
-      }
-
-      #navbar-text, #header-text, #aside-text, h3, h4 {
-        text-transform               : uppercase;
-      }
-
-      h2, h3 {
-        text-align                   : center;
-      }
-
-      h4 {
-        text-align                   : center;
-        color                        : #000;
-        font-size                    : 30px;
-      }
-
-      a {
-        color                        : #fff;
-        list-style-type              : none;
-      }
-
-      summary {
-        cursor                       : pointer;
-        text-align                   : left;
-        color                        : #ff0000;
-        width                        : 100%;
-        font-weight                  : 900;
-        text-transform               : uppercase;
-      }
-
-      #logo {
-        transform : translate(0, -8px);
-      }
-
-      #navbar-text {
-        font-family                  : 'Baloo Thambi';
-        transform                    : translate(80px, -70px);
-      }
-
-      #white-board {
-        background                   : #CCCCCC;
-        color                        : #ff0000;
-        border-left                  : 10px solid #ff0000;
-        min-height                   : 34%;
-        margin                       : 3% 10%;
-        border-top-left-radius       : 2%;
-        border-bottom-right-radius   : 2%;
-      }
-
-      #my-result {
-        padding                      : 10px 0 10px 0;
-        margin                       : 0 0 0 30%;
-        border-bottom-right-radius   : 10px;
-        border-bottom-left-radius    : 10px;
-        width                        : 300px;
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        color                        : #fff;
-      }
-
-      #on-white-board {
-        text-align                   : center;
-        padding                      : 100px;
-      }
-
-      #submit-button {
-        margin-top                   : 20px;
-        width                        : 100px;
-        height                       : 30px;
-        border                       : none;
-        border-radius                : 20px;
-        background                   : #000;
-        color                        : #fff;
-      }
-
-      #submit-button:hover {
-        background                   : #ff0000;
-        color                        : #fff;
-        border                       : none;
-      }
-
-      #box3 {
-        width                        : 230px;
-        height                       : 100px;
-        background                   : #3775a2;
-        border-bottom                : solid 12px #000;
-        border-left                  : solid 3px #000;
-        border-right                 : solid 3px #000;
-        border-top                   : solid 3px #000;
-        border-radius                : 5px;
-        transform                    : translate(-5px, 40px);
-        box-shadow                   : 3px 3px 15px 1px grey;
-      }
-
-      #box4 {
-        width                        : 5px;
-        height                       : 10px;
-        background                   : #000;
-        transform                    : translate(-125px, 50px);
-      }
-
-      #box5 {
-        width                        : 50px;
-        height                       : 85px;
-        background                   : #000;
-        border-radius                : 50%;
-        border                       : 1px solid #000;
-        transform                    : rotateX(80deg) translate(268px, -30px);
-        box-shadow                   : 6px 20px 30px 3px grey;
-      }
-
-      #box6 {
-        transform                    : translate(390px, -70px);
-      }
-
-      #box7 {
-        transform                    : translate(380px, -75px);
-      }
-
-      #box8 {
-        transform                    : translate(370px, -80px);
-      }
-
-      #box9 {
-        transform                    : translate(360px, -85px);
-      }
-
-      #box10-1 {
-        width                        : 38%;
-        height                       : 7%;
-        background                   : #fff;
-        border-top-left-radius       : 4px;
-        border-top-right-radius      : 4px;
-        transform                    : translate(177px, -193px);
-      }
-
-      #box10-2 {
-        width                        : 38.1%;
-        height                       : 5%;
-        background                   : #fff;
-        transform                    : translate(177px, -105px);
-      }
-
-      #box11 {
-        width                        : 20px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(200px, -191px);
-      }
-
-      #box12 {
-        width                        : 20px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(222px, -194px);
-      }
-
-      #box13 {
-        width                        : 40px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(245px, -197px);
-      }
-
-      #box14 {
-        width                        : 35px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(288px, -200px);
-      }
-
-      #box15 {
-        width                        : 40px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(215px, -196px);
-      }
-
-      #box16{
-        width                        : 25px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(257px, -199px);
-      }
-
-      #box17 {
-        width                        : 35px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(284px, -202px);
-      }
-
-      #box18 {
-        width                        : 34px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(322px, -205px);
-      }
-
-      #box19 {
-        width                        : 24px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(230px, -202px);
-      }
-
-      #box20 {
-        width                        : 32px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(256px, -205px);
-      }
-
-      #box21 {
-        width                        : 52px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(291px, -208px);
-      }
-
-      #box22 {
-        width                        : 32px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(345px, -211px);
-      }
-
-      #box23 {
-        width                        : 32px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(216px, -208px);
-      }
-
-      #box24 {
-        width                        : 25px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(250px, -211px);
-      }
-
-      #box25 {
-        width                        : 35px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(278px, -214px);
-      }
-
-      #box26 {
-        width                        : 41px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(315px, -217px);
-      }
-
-      #box27 {
-        width                        : 49px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(216px, -214px);
-      }
-
-      #box28 {
-        width                        : 32px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(267px, -217px);
-      }
-
-      #box29 {
-        width                        : 25px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(302px, -220px);
-      }
-
-      #box30 {
-        width                        : 37px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(330px, -223px);
-      }
-
-      #box31 {
-        width                        : 29px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(230px, -220px);
-      }
-
-      #box32 {
-        width                        : 41px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(261px, -223px);
-      }
-
-      #box33 {
-        width                        : 27px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(305px, -226px);
-      }
-
-      #box34 {
-        width                        : 33px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(334px, -229px);
-      }
-
-      #box35 {
-        width                        : 28px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(217px, -226px);
-      }
-
-      #box36 {
-        width                        : 38px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(247px, -229px);
-      }
-
-      #box37 {
-        width                        : 42px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(288px, -232px);
-      }
-
-      #box38 {
-        width                        : 22px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(333px, -235px);
-      }
-
-      #box39 {
-        width                        : 19px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(217px, -232px);
-      }
-
-      #box40 {
-        width                        : 43px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(239px, -235px);
-      }
-
-      #box41 {
-        width                        : 21px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(284px, -238px);
-      }
-
-      #box42 {
-        width                        : 36px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(308px, -241px);
-      }
-
-      #box43 {
-        width                        : 40px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(231px, -238px);
-      }
-
-      #box44 {
-        width                        : 27px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(273px, -241px);
-      }
-
-      #box45 {
-        width                        : 15px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(303px, -244px);
-      }
-
-      #box46 {
-        width                        : 27px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(320px, -247px);
-      }
-
-      #box47 {
-        width                        : 34px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(231px, -244px);
-      }
-
-      #box48 {
-        width                        : 21px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(267px, -247px);
-      }
-
-      #box49 {
-        width                        : 41px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(291px, -250px);
-      }
-
-      #box50 {
-        width                        : 19px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(334px, -253px);
-      }
-
-      #box51 {
-        width                        : 24px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(231px, -250px);
-      }
-
-      #box52 {
-        width                        : 44px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(257px, -253px);
-      }
-
-      #box53 {
-        width                        : 44px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(304px, -256px);
-      }
-
-      #box54 {
-        width                        : 24px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(350px, -259px);
-      }
-
-      #box55 {
-        width                        : 24px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(217px, -257px);
-      }
-
-      #box56 {
-        width                        : 18px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(243px, -260px);
-      }
-
-      #box57 {
-        width                        : 36px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(264px, -263px);
-      }
-
-      #box58 {
-        width                        : 28px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(302px, -266px);
-      }
-
-      #box59 {
-        width                        : 38px;
-        height                       : 3px;
-        background                   : #e93158;
-        transform                    : translate(200px, -263px);
-      }
-
-      #box60 {
-        width                        : 30px;
-        height                       : 3px;
-        background                   : #00d729;
-        transform                    : translate(240px, -266px);
-      }
-
-      #box61 {
-        width                        : 20px;
-        height                       : 3px;
-        background                   : #d1d1d1;
-        transform                    : translate(273px, -269px);
-      }
-
-      #box62 {
-        width                        : 20px;
-        height                       : 3px;
-        background                   : #fe720f;
-        transform                    : translate(296px, -272px);
-      }
-
-      #box6, #box7, #box8, #box9 {
-        width                        : 5px;
-        height                       : 5px;
-        border-radius                : 50%;
-        background                   : #fff;
-      }
-
-      #box-learn1, #box-learn2, #box-learn3, #box-learn4, #box-learn5, #box-learn6, #box-learn7, #box-learn8, #box-learn9, #box3, #box4, #box-shadow1, #box-shadow2 {
-        margin                       : 10px 0 10px 0;
-        display                      : inline-block;
-      }
-
-      #box-learn1 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        border-radius                : 10px;
-        width                        : 100px;
-        height                       : 100px;
-      }
-
-      #box-learn2 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        border-radius                : 50%;
-        margin-left                  : 50px;
-      }
-
-      #box-learn3 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        transform                    : translate(43px, -1px);
-      }
-
-      #box-learn4 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        margin-left                  : 50px;
-        transform                    : rotate(35deg) translate(0, -10px);
-      }
-
-      #box-learn5 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        margin-top                   : 50px;
-        transform                    : scale(1.5, 1.5);
-      }
-
-      #box-learn6 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        margin-left                  : 50px;
-        transform                    : skew(10deg, 20deg);
-      }
-
-      #box-learn7 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        transition                   : height 1s,   width 1s;
-      }
-
-      #box-learn7:hover {
-        height                       : 200px;
-        /*width                        : 200px;*/
-      }
-
-      #box-learn8 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-      }
-
-      #box-learn9 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-      }
-
-      #box-shadow1 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        box-shadow                   : 5px 5px 15px 5px #000;
-      }
-
-      #box-shadow2 {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        box-shadow                   : 5px 5px 15px 5px #000;
-        border-radius                : 50%;
-        margin-left                  : 50px;
-      }
-
-      #text-shadow {
-        text-shadow                  : 5px 5px 2px  #000;
-        color                        : red;
-        background                   : #fff;
-        width                        : 250px;
-        height                       : 50px;
-        line-height                  : 50px;
-        border-radius                : 5px;
-        margin-left                  : 34%;
-      }
-
-      #box-sizing1 {
-        background                   : linear-gradient(#ff0000, #ff6300);
-        width                        : 100px;
-        height                       : 100px;
-        margin                       : 10px 0 0 39%;
-        padding                      : 5px;
-        box-sizing                   : content-box;
-        border                       : 5px solid #000;
-      }
-
-      #box-sizing2 {
-        background                   : linear-gradient(#ff6300, #ff0000);
-        width                        : 100px;
-        height                       : 100px;
-        margin                       : 0 0 10px 39%;
-      }
-
-      #text-on-box-sizing {
-        color                        : #fff;
-      }
-
-      #caption-of-text1 {
-        color                        : #000;
-        font-size                    : 14px;
-        display                      : inline-block;
-        width                        : 26%;
-        transform                    : translate(-120px, -5px);
-      }
-
-      #caption-of-text2 {
-        color                        : #000;
-        font-size                    : 14px;
-        display                      : inline-block;
-        width                        : 26%;
-        transform                    : translate(-90px, -5px);
-      }
-
-      #caption-of-text3 {
-        color                        : #000;
-        font-size                    : 14px;
-        display                      : block;
-        width                        : 20%;
-        transform                    : translate(400px, -66px);
-      }
-
-      #frame1 {
-        max-height                   : 49%;
-      }
-
-      #frame2 {
-        height                       : 15%;
-        transform                    : translate(0, -110%);
-      }
-
-      #text1 {
-        color                        : #000;
-        background                   : orange;
-        width                        : 7%;
-        overflow                     : hidden;
-        border                       : 1px solid #000;
-        text-overflow                : ellipsis;
-        border-radius                : 10px;
-        transform                    : translate(85px, -60px);
-      }
-
-      #text2 {
-        color                        : #000;
-        background                   : yellow;
-        width                        : 7%;
-        overflow                     : hidden;
-        border                       : 1px solid #000;
-        border-radius                : 10px;
-        transform                    : translate(270px, -348px);
-        overflow                     : scroll;
-      }
-
-      #text3 {
-        color                        : #000;
-        background                   : cyan;
-        width                        : 7%;
-        display                      : inline-block;
-        word-wrap                    : break-word;
-        display                      : inline-block;
-        border                       : 1px solid #000;
-        border-radius                : 10px;
-        transform                    : translate(155px, -668px);
-      }
-
-      #last {
-        background                   : linear-gradient(to right bottom, #ff0000, #ff6300);
-        clear                        : both;
-        height                       : 50%;
-        width                        : 101.35%;
-        /*line-height                  : 50%;*/
-        font-family                  : 'Baloo Thambi';
-        transform                    : translate(-10px, 9px);
-      }
-
-      .input-form {
-        margin-bottom                : 5px;
-        border                       : #000 solid 2px;
-        border-radius                : 3px;
-        min-width                    : 300px;
-        height                       : 35px;
-        padding-left                 : 10px;
-      }
-
-      .text-div {
-        color                        : #fff;
-        text-transform               : uppercase;
-      }
-
-      .aside-article {
-        text-align                   : center;
-        margin-left                  : 3%;
-        margin-bottom                : 3%;
-        display                      : block;
-        font-size                    : 14px;
-        text-transform               : uppercase;
-        color                        : orange;
-      }
-    </style>
-  </head>
-
-
-  <body>
-          <!-- Navigation Section -->
-      <nav>
-        <div class="menu-wrap">
-          <img id="logo" src="html5.png" alt="html5 logo" width="90" height="90">
-          <h1 id="navbar-text">Navbar Section</h1>
-        </div>
-      </nav>
-
-          <!-- Header Section -->
-      <header>
-      	<h1 id="header-text">Header Section</h1>
-      </header>
-
-          <!-- Main Section -->
-      <main>
-        <article>
-          <figure>
-            <img src="headphone.jpg" alt="headphonee">
-            <figcaption>This Headphone Image</figcaption>
-          </figure>
-
-          <br>
-          <div id="white-board">
-            <h1 id="my-result"> - My Result Learn - </h1>
-            <div id="on-white-board">
-              <div id="frame2">
-                <div id="box3"></div>
-                <div id="box4"></div>
-                <div id="box5"></div>
-                <div id="box6"></div>
-                <div id="box7"></div>
-                <div id="box8"></div>
-                <div id="box9"></div>
-                <div id="box10-1"></div>
-                <div id="box10-2"></div>
-                <div id="box11"></div>
-                <div id="box12"></div>
-                <div id="box13"></div>
-                <div id="box14"></div>
-                <div id="box15"></div>
-                <div id="box16"></div>
-                <div id="box17"></div>
-                <div id="box18"></div>
-                <div id="box19"></div>
-                <div id="box20"></div>
-                <div id="box21"></div>
-                <div id="box22"></div>
-                <div id="box23"></div>
-                <div id="box24"></div>
-                <div id="box25"></div>
-                <div id="box26"></div>
-                <div id="box27"></div>
-                <div id="box28"></div>
-                <div id="box29"></div>
-                <div id="box30"></div>
-                <div id="box31"></div>
-                <div id="box32"></div>
-                <div id="box33"></div>
-                <div id="box34"></div>
-                <div id="box35"></div>
-                <div id="box36"></div>
-                <div id="box37"></div>
-                <div id="box38"></div>
-                <div id="box39"></div>
-                <div id="box40"></div>
-                <div id="box41"></div>
-                <div id="box42"></div>
-                <div id="box43"></div>
-                <div id="box44"></div>
-                <div id="box45"></div>
-                <div id="box46"></div>
-                <div id="box47"></div>
-                <div id="box48"></div>
-                <div id="box49"></div>
-                <div id="box50"></div>
-                <div id="box51"></div>
-                <div id="box52"></div>
-                <div id="box53"></div>
-                <div id="box54"></div>
-                <div id="box55"></div>
-                <div id="box56"></div>
-                <div id="box57"></div>
-                <div id="box58"></div>
-                <div id="box59"></div>
-                <div id="box60"></div>
-                <div id="box61"></div>
-                <div id="box62"></div>
-              </div>
-
-              <div>
-                  <details>
-                    <summary> Sign Up </summary>
-                      <h4>Form Sign Up</h4>
-                      <input type="name" class="input-form" placeholder="First Name"><br>
-                      <input type="name" class="input-form" placeholder="Last Name"><br>
-                      <input type="password" class="input-form" placeholder="Password"><br>
-                      <input type="password" class="input-form" placeholder="Repeat Password"><br>
-                      <input type="email" class="input-form" placeholder="admin@email.com"><br>
-                      <input type="submit" id="submit-button">
-                  </details>
-              </div>
-
-              <div>
-                  <details>
-                    <summary> Video And Audio </summary>
-                      <video width="400" height="400" controls poster="sumo.jpg">
-                        <source src="[V]ideo\Facebook\facebook_header.mp4">
-                      </video>
-                      <br><br><br><br>
-                      <audio controls>
-                        <source src="D:\[M]usic\Elektronomia - Vision (Instrumental Mix)  AirwaveMusic Release.mp3" type="audio/mp3" >
-                      </audio>
-                  </details>
-              </div>
-
-              <div>
-                  <details>
-                    <summary> Border Radius </summary>
-                      <div id="box-learn1"></div>
-                      <div id="box-learn2"></div>
-                  </details>
-              </div>
-
-              <div>
-                  <details>
-                    <summary> Box Shadow </summary>
-                      <div id="box-shadow1"></div>
-                      <div id="box-shadow2"></div>
-                  </details>
-              </div>
-
-              <div>
-                  <details>
-                    <summary> Text Shadow </summary>
-                      <h1 id="text-shadow">Text Shadow</h1>
-                  </details>
-              </div>
-
-              <div>
-                <details>
-                  <summary> Box Sizing & Vendor Prefix </summary>
-                    <div id="box-sizing1">
-                      <p id="text-on-box-sizing">TEXT</p>
-                    </div>
-                    <div id="box-sizing2"></div>
-                </details>
-              </div>
-
-              <div>
-                <details>
-                  <summary> Word Wrap & Text Overflow </summary>
-                    <h3 id="caption-of-text1">Overflow : Hidden &nbsp; &nbsp;+ Ellipsis</h3>
-                     <h3 id="caption-of-text2">Overflow : Scroll on Hover </h3>
-                    <h3 id="caption-of-text3">Word-Wrap : Break-Word</h3>
-                      <div id="frame1">
-                          <p id="text1"> TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. </p>
-                          <p id="text2"> TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. </p>
-                          <p id="text3"> TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. TEXT OF CONTENT. </p>
-                        <hr>
-                      </div>
-                </details>
-              </div>
-
-              <div>
-                <details>
-                  <summary> Transform : Translate & Rotate </summary>
-                    <div id="box-learn3"> <p class="text-div"> TRANSLATE </p> </div>
-                    <div id="box-learn4"> <p class="text-div"> ROTATE </p> </div>
-                </details>
-              </div>
-
-              <div>
-                <details>
-                  <summary> Transform : Scale & Skew </summary>
-                    <div id="box-learn5"> <p class="text-div"> Scale </p> </div>
-                    <div id="box-learn6"> <p class="text-div"> Skew </p> </div>
-                </details>
-              </div>
-
-              <div>
-                <details open>
-                  <summary> Transition </summary>
-                    <div id="box-learn7"></div>
-                    <div id="box-learn8"></div>
-                    <div id="box-learn9"></div>
-                </details>
-              </div>
-            </div>
-          </div>
-        </article>
-      </main>
-
-          <!-- Aside Section -->
-      <aside>
-          <h2 id="aside-text">Aside Section</h2>
-            <a class="aside-article" href="#"> This is a Item 01 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 02 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 03 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 04 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 05 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 06 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 07 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 08 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 09 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 10 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 11 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 12 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 13 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 14 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 15 from 16 </a>
-            <a class="aside-article" href="#"> This is a Item 16 from 16 </a>
-      </aside>
-
-          <!-- Footer Section -->
-      <footer>
-        <div id="last">
-          <h3>&copy Footer Section</h3>
-        </div>
-      </footer>
-  </body>
+   <head>
+   	<meta charset="UTF-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+   	<title>Document</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Baloo+Thambi">
+   	<style>
+		#box3 {
+			width                        : 230px;
+			height                       : 100px;
+			background                   : #3775a2;
+			border-bottom                : solid 12px #000;
+			border-left                  : solid 3px #000;
+			border-right                 : solid 3px #000;
+			border-top                   : solid 3px #000;
+			border-radius                : 5px;
+			transform                    : translate(30px, 220px);
+			box-shadow                   : 3px 3px 15px 1px grey;
+		}
+
+		#box4 {
+			width                        : 5px;
+			height                       : 10px;
+			background                   : #000;
+			transform                    : translate(145px, 220px);
+		}
+
+		#box5 {
+			width                        : 50px;
+			height                       : 85px;
+			background                   : #000;
+			border-radius                : 50%;
+			border                       : 1px solid #000;
+			transform                    : rotateX(80deg) translate(122px, 1050px);
+			box-shadow                   : 6px 20px 30px 3px grey;
+		}
+
+		#box6 {
+			transform                    : translate(240px, 114px);
+		}
+
+		#box7 {
+			transform                    : translate(230px, 109px);
+		}
+
+		#box8 {
+			transform                    : translate(220px, 104px);
+		}
+
+		#box9 {
+			transform                    : translate(210px, 99px);
+		}
+
+		#box10-1 {
+			width                        : 230px;
+			height                       : 5px;
+			background                   : #fff;
+			border-top-left-radius       : 4px;
+			border-top-right-radius      : 4px;
+			transform                    : translate(33px, -9px);
+		}
+
+		#box10-2 {
+			width                        : 230px;
+			height                       : 5px;
+			background                   : #fff;
+			transform                    : translate(33px, 80px);
+		}
+
+		#box11 {
+			background                   : #e93158;
+			width                        : 20px;
+			height                       : 3px;
+			transform                    : translate(200px, -191px);
+		}
+
+		#box12 {
+			width                        : 20px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(222px, -194px);
+		}
+
+		#box13 {
+			width                        : 40px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(245px, -197px);
+		}
+
+		#box14 {
+			width                        : 35px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(288px, -200px);
+		}
+
+		#box15 {
+			width                        : 40px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(215px, -196px);
+		}
+
+		#box16{
+			width                        : 25px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(257px, -199px);
+		}
+
+		#box17 {
+			width                        : 35px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(284px, -202px);
+		}
+
+		#box18 {
+			width                        : 34px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(322px, -205px);
+		}
+
+		#box19 {
+			width                        : 24px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(230px, -202px);
+		}
+
+		#box20 {
+			width                        : 32px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(256px, -205px);
+		}
+
+		#box21 {
+			width                        : 52px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(291px, -208px);
+		}
+
+		#box22 {
+			width                        : 32px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(345px, -211px);
+		}
+
+		#box23 {
+			width                        : 32px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(216px, -208px);
+		}
+
+		#box24 {
+			width                        : 25px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(250px, -211px);
+		}
+
+		#box25 {
+			width                        : 35px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(278px, -214px);
+		}
+
+		#box26 {
+			width                        : 41px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(315px, -217px);
+		}
+
+		#box27 {
+			width                        : 49px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(216px, -214px);
+		}
+
+		#box28 {
+			width                        : 32px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(267px, -217px);
+		}
+
+		#box29 {
+			width                        : 25px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(302px, -220px);
+		}
+
+		#box30 {
+			width                        : 37px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(330px, -223px);
+		}
+
+		#box31 {
+			width                        : 29px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(230px, -220px);
+		}
+
+		#box32 {
+			width                        : 41px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(261px, -223px);
+		}
+
+		#box33 {
+			width                        : 27px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(305px, -226px);
+		}
+
+		#box34 {
+			width                        : 33px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(334px, -229px);
+		}
+
+		#box35 {
+			width                        : 28px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(217px, -226px);
+		}
+
+		#box36 {
+			width                        : 38px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(247px, -229px);
+		}
+
+		#box37 {
+			width                        : 42px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(288px, -232px);
+		}
+
+		#box38 {
+			width                        : 22px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(333px, -235px);
+		}
+
+		#box39 {
+			width                        : 19px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(217px, -232px);
+		}
+
+		#box40 {
+			width                        : 43px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(239px, -235px);
+		}
+
+		#box41 {
+			width                        : 21px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(284px, -238px);
+		}
+
+		#box42 {
+			width                        : 36px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(308px, -241px);
+		}
+
+		#box43 {
+			width                        : 40px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(231px, -238px);
+		}
+
+		#box44 {
+			width                        : 27px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(273px, -241px);
+		}
+
+		#box45 {
+			width                        : 15px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(303px, -244px);
+		}
+
+		#box46 {
+			width                        : 27px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(320px, -247px);
+		}
+
+		#box47 {
+			width                        : 34px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(231px, -244px);
+		}
+
+		#box48 {
+			width                        : 21px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(267px, -247px);
+		}
+
+		#box49 {
+			width                        : 41px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(291px, -250px);
+		}
+
+		#box50 {
+			width                        : 19px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(334px, -253px);
+		}
+
+		#box51 {
+			width                        : 24px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(231px, -250px);
+		}
+
+		#box52 {
+			width                        : 44px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(257px, -253px);
+		}
+
+		#box53 {
+			width                        : 44px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(304px, -256px);
+		}
+
+		#box54 {
+			width                        : 24px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(350px, -259px);
+		}
+
+		#box55 {
+			width                        : 24px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(217px, -257px);
+		}
+
+		#box56 {
+			width                        : 18px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(243px, -260px);
+		}
+
+		#box57 {
+			width                        : 36px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(264px, -263px);
+		}
+
+		#box58 {
+			width                        : 28px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(302px, -266px);
+		}
+
+		#box59 {
+			width                        : 38px;
+			height                       : 3px;
+			background                   : #e93158;
+			transform                    : translate(200px, -263px);
+		}
+
+		#box60 {
+			width                        : 30px;
+			height                       : 3px;
+			background                   : #00d729;
+			transform                    : translate(240px, -266px);
+		}
+
+		#box61 {
+			width                        : 20px;
+			height                       : 3px;
+			background                   : #d1d1d1;
+			transform                    : translate(273px, -269px);
+		}
+
+		#box62 {
+			width                        : 39px;
+			height                       : 3px;
+			background                   : #fe720f;
+			transform                    : translate(296px, -272px);
+		}
+
+		#box6, #box7, #box8, #box9 {
+			width                        : 5px;
+			height                       : 5px;
+			border-radius                : 50%;
+			background                   : #fff;
+		}
+
+		#text1 {
+			transform : translate(260px, 110px);
+			color : red;
+			font-size: 50px;
+		}
+
+		#text2 {
+			transform  : translate(50px, -350px);
+			color           					  : #fff;
+			font-size                   : 50px;
+		}
+
+		#kamz {
+			color  : rgba(0, 0, 0, 0.19);
+			font-size : 20px;
+			transform : translate(1px, -232px);
+		}
+
+		#frame2 {
+			transform   								: translate(250px, 100px);
+		}
+
+		#frame3 {
+			transform : translate(110px, 285px);
+		}
+
+		body {
+			width                       : 1000px;
+			background                  : linear-gradient(#ff0000 50%, #fff 50%);
+			font-family : 'Baloo Thambi';
+		}
+   	</style>
+   </head>
+   <body>
+
+
+
+  <!-- Selamat Hari Kemerdekaan INDONESIA
+	     Yang Ke-72th...
+	-->
+
+
+		    <div id="frame2">
+   					<div id="box3"></div>
+   					<div id="box4"></div>
+   					<div id="box5"></div>
+   					<div id="box6"></div>
+   					<div id="box7"></div>
+   					<div id="box8"></div>
+   					<div id="box9"></div>
+						<div id="box10-1"></div>
+   					<div id="box10-2"></div>
+				</div>
+
+				<div id="frame3">
+   					<div id="box11"></div>
+   					<div id="box12"></div>
+   					<div id="box13"></div>
+   					<div id="box14"></div>
+   					<div id="box15"></div>
+   					<div id="box16"></div>
+   					<div id="box17"></div>
+   					<div id="box18"></div>
+   					<div id="box19"></div>
+   					<div id="box20"></div>
+   					<div id="box21"></div>
+   					<div id="box22"></div>
+   					<div id="box23"></div>
+   					<div id="box24"></div>
+   					<div id="box25"></div>
+   					<div id="box26"></div>
+   					<div id="box27"></div>
+   					<div id="box28"></div>
+   					<div id="box29"></div>
+   					<div id="box30"></div>
+   					<div id="box31"></div>
+   					<div id="box32"></div>
+   					<div id="box33"></div>
+   					<div id="box34"></div>
+   					<div id="box35"></div>
+   					<div id="box36"></div>
+   					<div id="box37"></div>
+   					<div id="box38"></div>
+   					<div id="box39"></div>
+   					<div id="box40"></div>
+   					<div id="box41"></div>
+   					<div id="box42"></div>
+   					<div id="box43"></div>
+   					<div id="box44"></div>
+   					<div id="box45"></div>
+   					<div id="box46"></div>
+   					<div id="box47"></div>
+   					<div id="box48"></div>
+   					<div id="box49"></div>
+   					<div id="box50"></div>
+   					<div id="box51"></div>
+   					<div id="box52"></div>
+   					<div id="box53"></div>
+   					<div id="box54"></div>
+   					<div id="box55"></div>
+   					<div id="box56"></div>
+   					<div id="box57"></div>
+   					<div id="box58"></div>
+   					<div id="box59"></div>
+   					<div id="box60"></div>
+   					<div id="box61"></div>
+   					<div id="box62"></div>
+					  </div>
+
+						<div>
+							<h1 id="text1">  INDEPENDENCE DAY </h1>
+							<h1 id="text2"> HAPPY INDONESIA </h1>
+							<h1 id="kamz">[Kamz] 17/08/2017</h1>
+						</div>
+   			</div>
+   </body>
 </html>
